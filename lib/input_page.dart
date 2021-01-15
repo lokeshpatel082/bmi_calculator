@@ -4,6 +4,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'input_content.dart';
 import 'reusable_card.dart';
 import 'constants.dart';
+import 'result_page.dart';
+import 'round_icon_button.dart';
+import 'bottom_container_button.dart';
 
 enum Gender { male, female }
 //enum Data { weight, age }
@@ -131,7 +134,7 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            IconButton(
+                            RoundIconButton(
                               icon: FontAwesomeIcons.minus,
                               onPressed: () {
                                 setState(() {
@@ -142,7 +145,7 @@ class _InputPageState extends State<InputPage> {
                             SizedBox(
                               width: 10,
                             ),
-                            IconButton(
+                            RoundIconButton(
                               icon: FontAwesomeIcons.plus,
                               onPressed: () {
                                 setState(() {
@@ -173,7 +176,7 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            IconButton(
+                            RoundIconButton(
                               icon: FontAwesomeIcons.minus,
                               onPressed: () {
                                 setState(() {
@@ -184,7 +187,7 @@ class _InputPageState extends State<InputPage> {
                             SizedBox(
                               width: 10,
                             ),
-                            IconButton(
+                            RoundIconButton(
                               icon: FontAwesomeIcons.plus,
                               onPressed: () {
                                 setState(() {
@@ -201,38 +204,19 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            child: Center(
-              child: Text(
-                "CALCULATE YOUR BM!",
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
-            height: 60.0,
-            width: double.infinity,
-            color: kBottomContainerColor,
-            margin: EdgeInsets.only(top: 10.0),
+          BottomContainerButton(
+            text: 'CALCULATE YOUR BMI',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ResultPage(),
+                ),
+              );
+            },
           ),
         ],
       ),
-    );
-  }
-}
-//#525662  282C4E
-
-class IconButton extends StatelessWidget {
-  IconButton({this.icon, this.onPressed});
-  final IconData icon;
-  final Function onPressed;
-  @override
-  Widget build(BuildContext context) {
-    return FloatingActionButton(
-      backgroundColor: Color(0xFF282C4E),
-      child: Icon(
-        icon,
-        color: Colors.white,
-      ),
-      onPressed: onPressed,
     );
   }
 }
