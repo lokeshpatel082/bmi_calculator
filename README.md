@@ -7,6 +7,9 @@ A new Flutter project created by LOKESH PATEL.
 This project is a simple  Mobile application to calculate BMI(Body mass Index) of a person.
 
 This app is created using flutter and dart programming languages.
+![Finished App](https://github.com/lokeshpatel082/bmi_calculator/images/1.gif)
+![Finished App](https://github.com/lokeshpatel082/bmi_calculator/images/2.gif)
+![Finished App](https://github.com/lokeshpatel082/bmi_calculator/images/3.gif)
 
 A few resources to get started for beginner:
 
