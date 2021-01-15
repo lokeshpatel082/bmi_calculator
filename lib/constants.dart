@@ -10,3 +10,6 @@ const kActiveCardColor = Color(0xFF222747);
 const kInactiveCardColor = Color(0xFF14193B);
 const kNumberTextStyle =
     TextStyle(fontWeight: FontWeight.w900, color: Colors.white, fontSize: 40.0);
+const kResultTitleText = TextStyle(color: Color(0xFF21CE72));
+const kBMI = TextStyle(fontWeight: FontWeight.bold, fontSize: 50);
+//const kResultDescription=TextStyle()
