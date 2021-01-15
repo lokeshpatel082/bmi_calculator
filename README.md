@@ -8,8 +8,7 @@ This project is a simple  Mobile application to calculate BMI(Body mass Index) o
 
 This app is created using flutter and dart programming languages.
 ![Finished App](https://github.com/lokeshpatel082/bmi_calculator/blob/master/images/1.gif)
-![Finished App](https://github.com/lokeshpatel082/bmi_calculator/blob/master/images/2.jpeg)
-![Finished App](https://github.com/lokeshpatel082/bmi_calculator/blob/master/images/3.jpeg)
+
 
 A few resources to get started for beginner:
 
