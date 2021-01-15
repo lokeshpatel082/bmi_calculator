@@ -1,9 +1,17 @@
 import 'package:bmi_calculator/constants.dart';
 import 'package:flutter/material.dart';
-import 'reusable_card.dart';
-import 'bottom_container_button.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
+import 'package:bmi_calculator/components/bottom_container_button.dart';
 
 class ResultPage extends StatelessWidget {
+  ResultPage(
+      {@required this.bmiResult,
+      @required this.resultText,
+      @required this.interpretation});
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,12 +23,15 @@ class ResultPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
-            child: Text(
-              'Your Result',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
+            child: Padding(
+              padding: EdgeInsets.only(left: 10.0, top: 10.0),
+              child: Text(
+                'Your Result',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
           Expanded(
@@ -31,12 +42,16 @@ class ResultPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('NORMAL', style: kResultTitleText),
+                  Text(resultText.toUpperCase(), style: kResultTitleText),
                   Text(
-                    '18.3',
+                    bmiResult,
                     style: kBMI,
                   ),
-                  Text('I am the loser'),
+                  Text(
+                    interpretation,
+                    textAlign: TextAlign.center,
+                    style: kBodyTextStyle,
+                  ),
                 ],
               ),
             ),
